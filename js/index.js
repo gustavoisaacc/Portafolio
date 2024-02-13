@@ -136,7 +136,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const sliderItems = document.querySelectorAll(".slider--section");
 
   setInterval(() => {
-    // optionRight();
+    optionRight();
   }, 3000);
 
   btnRight.addEventListener("click", optionRight);

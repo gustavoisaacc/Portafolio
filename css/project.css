@@ -128,7 +128,7 @@
     display: flex;
     place-content: center;
     border: 1px solid var(--gris2);
-    margin-top: 10rem;
+ 
     padding-bottom: 10rem;
     position: relative;
 }
@@ -172,9 +172,6 @@
     text-align: center;
     color: white;
     font-size: 20px;
-}
-.container--capa{
-    
 }
 
 .capa h3{
