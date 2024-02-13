@@ -1,0 +1,138 @@
+.navegacion{
+    position: fixed;
+    min-width: 25%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border:  1px solid var(--gris1);
+    z-index: 100;
+}
+
+nav ul {
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+ul li {
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--gris1);
+    padding-left: 1rem; 
+}
+
+ul li a{
+    font-size: 1.8rem;
+    color: var(--gris1);
+    width: 100%;
+    display: block;
+}
+
+
+/* .menu ul > li:hover {
+    background-color: var(--secondary);
+    color: var(--gris2);
+    transform: scale(1.1) translateX(10px);
+    transition: transform .3s ease;
+    cursor: pointer;
+    border-right: 20px solid var(--gris2) ;
+} */
+.active{
+    background-color: var(--secondary);
+    color: var(--gris2);
+    transform: scale(1.1) translateX(10px);
+    transition: transform .3s ease;
+    cursor: pointer;
+    border-right: 20px solid var(--gris2) ;
+}
+
+/* cv btn */
+.aside a.cv{
+    background-color: var(--gris1);
+    color: var(--secondary);
+    font-size: 2rem;
+    text-align: center;
+    border-radius: 1rem;
+    margin: 1rem;
+    padding: 1rem 0;
+}
+
+.navegacion .material-icons{
+    font-size: 3rem;
+    margin-right: 1rem;
+    vertical-align: bottom;
+}
+
+@media (max-width: 790px) {
+    
+    .aside a.cv{
+        margin: 1rem 1.8rem;
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 750px) {
+    .aside a.cv{
+        margin: 1rem 1.8rem ;
+    }
+    .navegacion{
+        min-width: 0%;
+    }
+}
+@media (max-width: 750px){
+    .aside{
+        position: relative;
+        background-color: var(--gris1);
+    }
+    .navegacion{
+        min-width: 80%;
+        z-index: 1000;
+        background: -webkit-radial-gradient(rgba(22, 135, 237), rgb(101, 145, 189, .3));
+        background: radial-gradient(rgba(22, 135, 237), rgb(101, 145, 189, .3));
+        height: 50px;
+        position: fixed;
+        bottom: 1rem;
+        right: 10%;
+        border-radius: 30px;
+        flex-direction: row;
+    }
+    nav ul {
+        width: 70%;
+        height: 100%;
+        position: absolute;
+        bottom: 0;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    ul li a{
+        z-index: 1000;
+        padding: 5px;
+        display: inline-block;
+        text-align: center;
+        margin: 0 7px;
+    }
+    ul li{
+        display: inline-block;
+        padding: 0;
+        border-bottom: none;
+    }
+    .active{
+        background-color: transparent !important;
+        color: var(--gris2);
+        transform: scale(1) translateX(0);
+        transition: transform .3s ease;
+        cursor: pointer;
+        border-right: none ;
+        border-radius: 30px;
+    }
+    .aside a.cv{
+        background-color: transparent;
+        padding: 0;
+        color: white;
+    }
+    .text{
+        display: none;
+    }
+}

@@ -1,0 +1,247 @@
+.projects{
+    height: 100vh;
+    background-color: var(--gris1);
+}
+@media (max-width: 950px){
+    .projects{
+        overflow-y: scroll;
+    }
+}
+
+.my-project{
+    height: 90%;
+    width: 90%;
+    margin: 5rem 0;
+
+}
+
+@media (max-width: 700px){
+    .my-project{  
+        height: 90%;
+        margin: 5rem 0;
+    }
+}
+
+.repos {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 10px;
+}
+.project{
+    padding: 10px;
+    border: 1px solid rgb(101, 145, 189);
+}
+/* @media (max-width: 950px){
+    .project{
+    }
+}
+
+
+@media (max-width: 950px){
+    .project .job{
+        width: 250px;
+    }
+}
+@media (max-width: 750px){
+    .project .job{
+        width: 200px;
+    }
+}
+@media (max-width: 700px){
+    .project .job{
+        width: 250px;
+        display: block;
+    }
+    .project{
+        grid-template-columns: 1fr;
+    }
+}
+
+.project .job .capa{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0 3rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: -webkit-radial-gradient(rgb(22, 135, 237), rgb(101, 145, 189));
+    background: radial-gradient(rgb(22, 135, 237), rgb(101, 145, 189));
+    transition: all .5s ease-in;
+    opacity: 0;
+    visibility: hidden;
+    text-align: center;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+
+
+.project .job img{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project .job:hover .capa{
+    transition: all .5s ease-in;
+    opacity: 1;
+    visibility: visible;
+}
+.project .job a{
+    color: var(--gris3)
+}
+@media (max-width: 1050px){
+    .project .job a{
+        font-size: 1.3rem;
+    }
+}
+.project .job p.btn-a{
+    transform: scale(.9);
+    margin-top: 2rem;
+}
+@media (max-width: 1050px){
+    .project .job  p.btn-a{
+        padding: 5px 20px;
+        margin-top: 2rem;
+        font-size: 1.3rem;
+    }
+}
+
+.project .job p.btn-a:hover{
+    background: -webkit-radial-gradient(rgb(113, 174, 230), rgb(3, 83, 151));
+    background: radial-gradient(rgb(113, 174, 230), rgb(3, 83, 151));
+    color: var(--blanco);
+    transition: all .3s ease-in;
+    transform: scale(.8);
+} 
+
+ */
+.container--slider{
+    display: flex;
+    place-content: center;
+    border: 1px solid var(--gris2);
+    margin-top: 10rem;
+    padding-bottom: 10rem;
+    position: relative;
+}
+.container--carrusel{
+    width: 800px;
+    height: 500px;
+    margin-top: 10rem;
+    overflow: hidden;
+    box-shadow: 0px 15px 21px rgba(0, 0, 0, 0.4);
+ }
+.carrusel{
+    width: 300%;
+    height: 100%;
+    display: flex;
+    background-color: transparent;
+}
+.slider--section{
+    width: calc(100% / 3);
+    height: 100%;
+    position: relative;
+}
+
+.slider--section img {
+    width: 100%;
+    height: 100%;    
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.capa{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(10, 66, 144, 0.7);
+    opacity: 0;
+    transition: all ease-in .3s;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+}
+.container--capa{
+    
+}
+
+.capa h3{
+    margin-bottom: 20px;
+}
+
+.tecnologias{
+    margin-top: 100px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+
+.slider--section:hover > .capa{
+    opacity: 1;
+}
+
+.link{
+    margin-top: 20px;
+}
+
+.link a{
+    text-decoration: none;
+}
+
+.link svg{
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    fill: white;
+}
+
+.arrow--left,
+.arrow--right{
+    display: flex;
+    position: absolute;
+    font-size: 5rem;
+    border-radius: 50%;
+    padding: 0 5px;
+    user-select: none;
+    color: var(--gris2);
+    font-weight: 600;
+    background-color: transparent;
+    transition: all .3s ease-in;
+    cursor: pointer;
+    top: 50%;
+}
+
+.arrow--left:hover,
+.arrow--right:hover{
+    background-color: #333333d4;
+    color: var(--blanco);
+}
+
+.arrow--left{
+    left: 5%;
+    transform: translateX(-50%);
+}
+.arrow--right{
+    right: 2%;
+    transform: translateX(-50%);
+}
+@media (max-width: 950px) {
+    .container--carrusel{
+        width: 500px;
+        height: 300px;
+        margin-top: 10rem;
+        overflow: hidden;
+    }
+}
